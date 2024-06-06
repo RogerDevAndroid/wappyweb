@@ -21,7 +21,7 @@ import { TranslateService } from '@ngx-translate/core';
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
-  title = 'Ultimate Salon';
+  title = 'Wappy';
 
   constructor(
     private router: Router,
@@ -53,11 +53,11 @@ export class AppComponent implements OnInit {
 
           const lng = localStorage.getItem('selectedLanguage');
           if (!lng || lng == null) {
-            localStorage.setItem('selectedLanguage', 'en');
+            localStorage.setItem('selectedLanguage', 'es');
             localStorage.setItem('direction', 'ltr');
           }
 
-          this.translate.use(localStorage.getItem('selectedLanguage') || 'en');
+          this.translate.use(localStorage.getItem('selectedLanguage') || 'es');
           const direaction = localStorage.getItem('direction') as string;
           document.documentElement.dir = direaction;
 
